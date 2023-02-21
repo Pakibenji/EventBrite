@@ -1,0 +1,44 @@
+<div class = 'jumbotron "rounded"'>
+    <div class="container">
+        <h1 class="display-2">Bienvenue sur EventBrite!</h1>
+        <h2 class="display-6 text-center">EventBrite permet de créer des évenements et d'y participer</h2>
+        <div class = "container ">
+          <% if current_user%>
+          <div class="mx-auto" style="width: 200px;"><%= link_to 'New Event', new_event_path, class:"btn btn-light " %></div> 
+          <% else %>
+          <div class="mx-auto" style="width: 200px;"><%= link_to "Sign up", new_user_registration_path, class:"btn btn-light"%></div>
+          <% end %>
+        </div>
+    </div>
+ </div>
+
+
+
+<div class = container>
+  <div class="row">
+  <% @event.each do |event| %> 
+    <div class="col-md-auto">
+      <h2><%= event.title %></h2>
+      <p><%= event.description %></p>
+      <p><%= link_to "Détails", "events/#{event.id}", class:"btn btn-dark btn-lg" %></p>
+    </div>
+       <hr>
+  <% end %>
+
+  </div>
+</div>
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+    

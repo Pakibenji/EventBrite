@@ -1,0 +1,15 @@
+
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading"><p><%= @event.title %></h1>
+        <hr>
+        <p class="text-left"> Date : <%= @event.start_date %> </p>
+        <p class="text-left"> Durée : <%= @event.duration %> minutes </p>
+        <p class="text-left"> Lieu : <%= @event.location %></p>
+        <p class="text-center"><%= @event.description %></p>
+        <hr>
+        <p class=" lead text-center">Tarif : <%= @event.price %> €</p>
+        <p>Organisateur: <%= @event.admin.first_name %> <%= @event.admin.last_name %></p>
+      </main>
+</div>
